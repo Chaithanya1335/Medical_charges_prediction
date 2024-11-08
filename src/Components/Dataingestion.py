@@ -6,6 +6,8 @@ from src.logger import logging
 from sklearn.model_selection import train_test_split
 from src.Components.DataTransformation import DataTransformation
 from src.Components.DataTransformation import DataTransformationConfig
+from src.Components.ModelTraining import ModelTraining
+from src.Components.ModelTraining import ModelTrainingConfig
 from dataclasses import dataclass
 
 @dataclass
@@ -45,4 +47,5 @@ class DataIngestion:
 if __name__ =='__main__':
     train_data_path,test_data_path = DataIngestion().intiate_dataingestion()
     train_arr,test_arr,_ = DataTransformation().initiate_data_Transformation(train_data_path,test_data_path)
-    
+    r2_score = ModelTraining().initiate_model_Training(train_arr=test_arr,test_arr=test_arr)
+    print(r2_score)

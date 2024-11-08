@@ -18,3 +18,5 @@ smoker: Smoking
 region: the beneficiary's residential area in the US, northeast, southeast, southwest, northwest.
 
 charges: Individual medical costs billed by health insurance  "# Medical_charges_prediction" 
+
+
